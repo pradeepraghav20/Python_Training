@@ -51,12 +51,15 @@ print(newdf.head())
 
 
 
-newdf.drop(4)
-newdf[1]=None
-print(newdf.dropna())
-
-newdf[0]=None
-# print(newdf)
+# newdf.drop(4)
+# newdf[1]=None
+# print(newdf.dropna())
+#
+# newdf[0]=None
+# # print(newdf)
 # print(newdf.fillna(120))
-print(newdf.duplicated())
-print(newdf.drop_duplicates())
+# print(newdf.duplicated())
+# print(newdf.drop_duplicates())
+
+import  os
+print(os.getcwd())
