@@ -5,8 +5,6 @@ with open ("friends.csv",'r') as file:
     for row in reader:
         print(row)
 
-
-
 import csv
 with open('protagonist.csv', 'w', newline='') as file:
     writer = csv.writer(file)
