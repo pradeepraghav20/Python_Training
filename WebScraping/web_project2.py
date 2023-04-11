@@ -5,7 +5,7 @@ import csv
 URL = "http://www.values.com/inspirational-quotes"
 r = requests.get(URL)
 
-soup = BeautifulSoup(r.content, 'html5lib')
+soup = BeautifulSoup(r.content, "html.parser")
 # print(soup.prettify())
 
 quotes=[]  # a list to store quotes
@@ -27,4 +27,9 @@ with open(filename, 'w', newline='') as f:
     w.writeheader()
     for quote in quotes:
         w.writerow(quote)
+
+
+
+
+
 
