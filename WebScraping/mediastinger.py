@@ -44,6 +44,7 @@ with open(filename, 'w', newline='') as f:
     w.writeheader()
     for i in media:
         w.writerow(i)
+#done
 
 
 # find('span',attrs={'id':"spancredit"}).text
