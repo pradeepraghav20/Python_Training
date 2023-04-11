@@ -26,8 +26,8 @@ media_dict['DuringText']=duringcreditstext
 afterthecreditsh=duringcredits.findAll('h3')[1].text.strip()
 afterthecreditstext=duringcredits.findAll('p')[1].text
 
-# media_dict[]=
-# media_dict[]=
+media_dict['afterthecreditsh']=afterthecreditsh
+media_dict['afterthecreditstext']=afterthecreditstext
 #MOVIE DETAILS
 movie_details=soup.find('div',attrs={'class':'post_firstwrapper'})
 titles=movie_details.find('div').text
@@ -40,11 +40,11 @@ titles=movie_details.find('div').text
 media.append(media_dict)
 filename = 'media.csv'
 with open(filename, 'w', newline='') as f:
-    w = csv.DictWriter(f, ['DuringHeading', 'DuringText', 'rating', 'title'])
+    w = csv.DictWriter(f, ['afterthecreditstext','afterthecreditsh','DuringHeading', 'DuringText', 'rating', 'title'])
     w.writeheader()
     for i in media:
         w.writerow(i)
 #done
 
-
+print ("File Created- LGTM")
 # find('span',attrs={'id':"spancredit"}).text
