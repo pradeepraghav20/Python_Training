@@ -2,8 +2,11 @@ import csv
 
 with open ("friends.csv",'r') as file:
     reader=csv.reader(file)
+    print(reader)
     for row in reader:
-        print(row)
+        pass
+        # print(row)
+
 
 import csv
 with open('protagonist.csv', 'w', newline='') as file:
@@ -13,10 +16,17 @@ with open('protagonist.csv', 'w', newline='') as file:
     writer.writerow([2, "Harry Potter", "Harry Potter"])
 
 
-with open ('protagonist.csv', 'r') as file:
-    read=csv.reader(file)
-    for i in read:
-        print(i)
+
+
+#
+# with open ('protagonist.csv', 'r') as file:
+#     read=csv.reader(file)
+#     for i in read:
+#         print(i)
+
+import pandas as pd
+content=pd.read_csv("friends.csv",usecols =["name"])
+print(content)
 
 
 
