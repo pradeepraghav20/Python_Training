@@ -11,10 +11,14 @@ print(array2[0][1])
 
 #copy and view
 
-array1=np.array((range(10)))
-print(array1)
-copy_array=array1.copy()
-print(copy_array)
-view_array=array1.view()
-print(view_array)
+# array1=np.array((range(10)))
+# print(array1)
+# copy_array=array1.copy()
+# print(copy_array)
+# view_array=array1.view()
+# print(view_array)
 
+array1=np.array(range(22))
+print(array1)
+array1.reshape(2,11)
+print(array1)
